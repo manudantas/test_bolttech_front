@@ -1,0 +1,50 @@
+.project-form {
+    margin-top: 20px;
+    .form-card {
+        margin-left: 20px;
+        background-color: white;
+        width: 320px;
+        height: 300px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        box-shadow: 1px 1px 8px 1px #d2d5d5;
+
+        .img-project {
+            text-align: center;
+            margin-top: 20px;
+            img {
+                height: 90px;
+            }
+        }
+
+        .form-info {
+            padding-left: 15px;
+            padding-right: 15px;
+            .project-input {
+                margin-top: 15px;
+
+                label {
+                    color: #4A4A4A;
+                }
+            }
+        }
+
+        .btn-project-form {
+            text-align: center;
+            margin-top: 23px;
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: #4A4A4A;
+            }
+
+            .project-form {
+                background-color: #0d98c7;
+                border: 1px solid #0d98c7;
+            }
+        }
+    }
+}

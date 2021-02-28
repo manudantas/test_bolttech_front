@@ -1,11 +1,26 @@
-<div class="login-page">
-    <div class="login-card">
-        <div class="login-form">
-            <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="custom-form">
+<div class="signup-page">
+    <div class="signup-card">
+        <div class="signup-form">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="custom-form">
                 <div class="img-user">
                     <img src="../../../assets/images/user.png">
                 </div>
                 <div class="form-info">
+                    <div class="signin-input">
+                        <label class="form-label">
+                            <strong>Name</strong>
+                        </label>
+                        <br>
+                        <input 
+                            type="name"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            formControlName="name"
+                            placeholder="name"
+                            required
+                        />
+                    </div>
                     <div class="signin-input">
                         <label class="form-label">
                             <strong>Email</strong>
@@ -36,9 +51,9 @@
                             required
                         />
                     </div>
-                    <div class="btn-login">
-                        <button type="submit" class="btn btn-primary login">SIGN IN</button>
-                        <a routerLink="/signup">Don't have an account? Register now</a>
+                    <div class="btn-signup">
+                        <button type="submit" class="btn btn-primary signup">SIGN UP</button>
+                        <a routerLink="/signin">Back</a>
                     </div>
                 </div>
             </form>

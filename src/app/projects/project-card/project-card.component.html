@@ -1,0 +1,10 @@
+<div class="project-card">
+    <div class="header-card">
+        <h3>{{project.title}}</h3>
+        <i class="fas fa-times" (click)="onRemoveProject()"></i>
+    </div>
+    <hr>
+    <div class="project-info">
+        <pre>{{project | json}}</pre>
+    </div>
+</div>

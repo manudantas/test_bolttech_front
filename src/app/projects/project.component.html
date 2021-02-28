@@ -1,0 +1,10 @@
+<div class="project-component">
+    <div class="project-group">
+        <div class="project-card" *ngFor="let project of projects">
+            <app-project-card (removeProject)="removeProjectFromList($event)" [project]="project"></app-project-card>
+        </div>
+        <div>
+            <app-project-form (newProject)="addNewProject($event)"></app-project-form>
+        </div>
+    </div>
+</div>

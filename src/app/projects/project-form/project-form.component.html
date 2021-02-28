@@ -1,0 +1,29 @@
+<div class="project-form">
+    <div class="form-card">
+        <form [formGroup]="projectForm" (ngSubmit)="onSubmit()" class="custom-form">
+            <div class="img-project">
+                <img src="../../../assets/images/concept.png">
+            </div>
+            <div class="form-info">
+                <div class="project-input">
+                    <label class="form-label">
+                        <strong>Title</strong>
+                    </label>
+                    <br>
+                    <input 
+                        type="title"
+                        class="form-control"
+                        id="title"
+                        name="title"
+                        formControlName="title"
+                        placeholder="title"
+                        required
+                    />
+                </div>
+                <div class="btn-project-form">
+                    <button type="submit" class="btn btn-primary project-form">CREATE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
