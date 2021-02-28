@@ -1,0 +1,47 @@
+<div class="login-page">
+    <div class="login-card">
+        <div class="login-form">
+            <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="custom-form">
+                <div class="img-user">
+                    <img src="../../../assets/images/user.png">
+                </div>
+                <div class="form-info">
+                    <div class="signin-input">
+                        <label class="form-label">
+                            <strong>Email</strong>
+                        </label>
+                        <br>
+                        <input 
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            formControlName="email"
+                            placeholder="email"
+                            required
+                        />
+                    </div>
+                    <div class="signin-input">
+                        <label class="form-label">
+                            <strong>Password</strong>
+                        </label>
+                        <br>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            formControlName="password"
+                            placeholder="password"
+                            required
+                        />
+                    </div>
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-primary login">SIGN IN</button>
+                        <a href>Don't have an account? Register now</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
