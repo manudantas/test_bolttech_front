@@ -1,0 +1,36 @@
+.task-component {
+    .task-content {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        label {
+            margin-left: 5px;
+        }
+        
+        .edit-description {
+            display: flex;
+    
+            input {
+                margin-right: 5px;
+            }
+    
+            .update {
+                background-color: #0d98c7;
+                border: 1px solid #0d98c7;
+            }
+        }
+
+        .form-info {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .icons-group {
+            display: flex;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+}

@@ -6,9 +6,10 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectComponent } from './project.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
-  declarations: [ProjectComponent, ProjectCardComponent, ProjectFormComponent],
+  declarations: [ProjectComponent, ProjectCardComponent, ProjectFormComponent, TaskComponent],
   imports: [
     CommonModule,
     FormsModule, 

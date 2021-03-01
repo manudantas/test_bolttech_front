@@ -14,9 +14,32 @@
         font-size: 20px;
     }
 
+    .edit-title {
+        display: flex;
+
+        input {
+            margin-right: 5px;
+        }
+
+        .add {
+            background-color: #0d98c7;
+            border: 1px solid #0d98c7;
+        }
+    }
+
+    .project-info {
+        height: 325px;
+    }
+
     .header-card {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .icons-group {
+            i {
+                margin-left: 5px;
+            }
+        }
     }
 }

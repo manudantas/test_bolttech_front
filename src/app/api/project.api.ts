@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
-import { Project } from '../projects/types/project';
+import { Project, Task } from '../projects/types/project';
 import { RequestApi } from './request.api';
 
 @Injectable({ providedIn: 'root' })
@@ -28,5 +28,10 @@ export class ProjectApi extends RequestApi {
     public remove(id: string): Observable<Project> {
         return this.delete<Project>(`${this.endpoint}/${id}`);
     }
+
+    public addTask(id: string, task: Task): Observable<Task> {
+        return this.post<Task, Task>(`${this.endpoint}/task/${id}`, task);
+    }
+    
 
 }

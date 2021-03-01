@@ -19,9 +19,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
     constructor(private readonly formBuilder: FormBuilder, private readonly projectApi: ProjectApi) {}
 
     public ngOnInit(): void {
-        this.subscriptions.sink = this.projectApi.getAll().subscribe((projects) => {
-            this.projects = projects;
-        })
+        this.getProjects();
     }
 
     public removeProjectFromList(project: Project): void {
@@ -36,8 +34,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.subscriptions.unsubscribe();
     }
 
-    public onSubmit(): void {
-        //call service
+    public getProjects(): void {
+        this.subscriptions.sink = this.projectApi.getAll().subscribe((projects) => {
+            this.projects = projects;
+        })
     }
 
 }

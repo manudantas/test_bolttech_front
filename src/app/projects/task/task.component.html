@@ -1,0 +1,40 @@
+<div class="task-component">
+    <div class="task-content">
+        <div *ngIf="!isEditing">
+            <form [formGroup]="taskCompletedForm" class="custom-form">
+                <div class="form-info">
+                    <input 
+                        type="checkbox" 
+                        id="isCompleted"
+                        name="isCompleted"
+                        formControlName="isCompleted"
+                        required
+                    >
+                    <div *ngIf="!isEditing">
+                        <label data-toggle="tooltip" data-placement="top" title="Finish Date: {{task.finishDate | date}}">{{task.description}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="isEditing">
+            <form [formGroup]="editTaskForm" (ngSubmit)="onSubmit()" class="custom-form">
+                <div class="edit-description">
+                    <input 
+                        type="description"
+                        class="form-control"
+                        id="description"
+                        name="description"
+                        formControlName="description"
+                        placeholder="New Description"
+                        required
+                    />
+                    <button type="submit" class="btn btn-primary update"><i class="fas fa-check"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="icons-group">
+            <i class="fas fa-edit" (click)="changeEdit()"></i>
+            <i class="fas fa-times" (click)="onRemoveTask()"></i>
+        </div>
+    </div>
+</div>
