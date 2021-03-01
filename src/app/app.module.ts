@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { ProjectModule } from './projects/project.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
